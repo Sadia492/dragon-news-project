@@ -17,7 +17,7 @@ export default function NewsDetails() {
     _id,
     category_id,
   } = news;
-  console.log(news);
+
   return (
     <div className="w-4/5 mx-auto">
       <div>

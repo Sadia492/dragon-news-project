@@ -6,7 +6,7 @@ import auth from "../firebase/firebase.config";
 export default function Login() {
   const { state } = useLocation();
   const navigate = useNavigate();
-  //   console.log(location);
+
   const { signInUser, setUser } = useContext(authContext);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -15,7 +15,6 @@ export default function Login() {
     const email = form.get("email");
     const password = form.get("password");
     signInUser(email, password).then((result) => {
-      console.log(result.user);
       setUser(result.user);
       navigate(state ? state : "/");
     });

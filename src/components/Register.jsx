@@ -12,12 +12,9 @@ export default function Register() {
     const photo = form.get("photo");
     const password = form.get("password");
     createNewUser(email, password).then((result) => {
-      console.log(result.user);
       setUser(result.user);
       updateUser({ displayName: name, photoURL: photo });
     });
-
-    // console.log(name);
   };
   return (
     <div className="card bg-base-100 w-full max-w-lg shrink-0 rounded-none p-10">
